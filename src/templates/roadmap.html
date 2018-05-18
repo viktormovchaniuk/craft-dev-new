@@ -1,0 +1,113 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+
+    {% include "partials/_header.html" %}
+    <section class="roadmap">
+        <div class="container">
+            <h3 class="section-title roadmap-title">ROADMAP</h3>
+            <div class="blog-tags">
+                <a class="blog-tags__link blog-tags__link--active" href="#">stay alive: survival</a>
+                <a class="blog-tags__link" href="#">MACH 3</a>
+            </div>
+            <div id="roadmap" class="roadmap">
+                <div class="progress-bar">
+                    <div class="progress-bar__row">
+                        <div class="porogress-bar__item">
+                            <button type="button" data-sort-by="color" class="progress-bar__btn is-checked">Idea</button>
+                        </div>
+                        <div class="porogress-bar__item">
+                            <button type="button"  data-sort-by="color" class="progress-bar__btn">Closed Alpha-Testing</button>
+                        </div>
+                        <div class="porogress-bar__item">
+                            <button type="button" data-sort-by="color" class="progress-bar__btn" >To Leave Early Access</button>
+                        </div>
+                        <div class="porogress-bar__item">
+                            <button type="button" data-sort-by="color" class="progress-bar__btn" >Beta</button>
+                        </div>
+                        <div class="porogress-bar__item">
+                            <button type="button" data-sort-by="color" class="progress-bar__btn" >Later</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid" style="margin-top: 20px;">
+            {% set 
+                grids = [
+                    {
+                        header: "",
+                        title: "",
+                        text: ""
+                    },
+                    {
+                        header: "New",
+                        title: "The technique of mapping the map",
+                        event: "red",
+                        text: "You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and more"
+                    },
+                    {
+                        header: "New",
+                        event: "blue",
+                        title: "Improve the logic of collecting resources with an inventory tool available",
+                        text: ""
+                    },
+                    {
+                        header: "New",
+                        title: "The technique of mapping the map",
+                        event: "green",
+                        text: "You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and more"
+                    },
+                    {
+                        header: "New",
+                        title: "Improve the logic of collecting resources with an inventory tool available Improve the logic of collecting resources with an inventory tool available",
+                        event: "yellow",
+                        text: "You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and more"
+                    },
+                    {
+                        header: "New",
+                        title: "The technique of mapping the map",
+                        event: "cyan",
+                        text: "You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and more"
+                    },
+                    {
+                        header: "Done",
+                        title: "The technique of mapping the map",
+                        event: "lime",
+                        text: "You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and more"
+                    }
+                ] 
+            %} 
+            {% for grid in grids %}
+
+                {% if loop.first  %}
+                    <div class="grid-sizer"></div>
+                    <div class="gutter-sizer"></div>
+                {% else %}
+                    <div class="grid-item" data-color="{{ grid.color }}">
+                        <div class="card">
+                            <div class="card__header">
+                                <span class="card__header-text">{{ grid.header }}</span>
+                            </div>
+                            <div class="card__body">
+                                <h4 class="card__body-title">{{ grid.title }}</h4>
+                                <p class="card__body-text">
+                                    {{ grid.text }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
+
+
