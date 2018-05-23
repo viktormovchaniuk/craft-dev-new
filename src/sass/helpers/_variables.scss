@@ -3,6 +3,8 @@ $gray-3:    #f1f1f1;
 $gray-2:    #efefef;
 $gray-3:    #868686;
 $gray-4:    #333;
+$gray-5:    #f6f6f6;
+$gray-6:    #aaa;
 $black:     #000;
 $yellow:    #faac09;
 
@@ -11,6 +13,8 @@ $base-font-color: $gray-4;
 $base-font-family: "Roboto", Sans-Serif;
 $base-font-size: 1rem;
 $base-line-height: 1.4;
+
+$subtitle-color: $gray-5;
 
 
 $bg-main: $white;
@@ -23,5 +27,7 @@ $border-width: 2px;
 $link-color: $yellow;
 
 $box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .1);
+
+$disable-color: $gray-6;
 
 

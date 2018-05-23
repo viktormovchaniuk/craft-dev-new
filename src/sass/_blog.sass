@@ -34,13 +34,34 @@
         margin-bottom: 0
     
 
+.tags
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: center
+    margin-bottom: 3.125rem
+    &__item
+        margin-right: 20px
+        margin-bottom: 10px
+
 .tag
     color: $white
     text-transform: uppercase
     font-size: .875rem
-    padding: .75em 1.75em
-    background-color: $yellow
+    padding: .625em 1.75em
     display: inline-block
+    border: $border-width solid $yellow
+    color: $base-font-color
+    font-weight: 700
+    
+
+.tag--active
+    background-color: $yellow
+    text-decoration: none
+    color: $white
+
+.tag:hover
+    text-decoration: none
 
 .date, .view
     padding-left: 35px

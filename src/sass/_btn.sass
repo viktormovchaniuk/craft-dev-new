@@ -73,3 +73,32 @@
 
 .btn--dark
     color: $white
+
+.btn--close
+    border: none
+    position: relative
+    width: 50px
+    height: 50px
+    padding: 10px
+    &:after
+        position: absolute
+        content: ''
+        height: 2px
+        background-color: $border-color
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        margin: auto
+        transform: rotate(45deg)
+    &:before
+        position: absolute
+        content: ''
+        height: 2px
+        background-color: $border-color
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        margin: auto
+        transform: rotate(-45deg)

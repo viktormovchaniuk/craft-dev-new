@@ -7,28 +7,45 @@ title: Index page
 	
     <section class="roadmap">
         <div class="container">
-            <h3 class="section-title roadmap-title">ROADMAP</h3>
-            <div class="blog-tags">
-                <a class="blog-tags__link blog-tags__link--active" href="#">stay alive: survival</a>
-                <a class="blog-tags__link" href="#">MACH 3</a>
-            </div>
+            <h1 class="page-title">
+                <span class="page-title__text">Roadmap</span>
+                <span class="page-title__bg">Roadmap</span>
+            </h1>
+
+            {% include "partials/_tags.html" %}
+            
             <div id="roadmap" class="roadmap">
                 <div class="progress-bar">
                     <div class="progress-bar__row">
-                        <div class="porogress-bar__item">
-                            <button type="button" data-sort-by="color" class="progress-bar__btn is-checked">Idea</button>
+                        <div class="progress-bar__item">
+                            <button type="button" data-sort-by="color" class="progress-bar__btn is-checked">
+                                <span class="progress-bar__event">Idea</span>
+                            </button>
+                            <span class="progress-bar__date">September<br> 2017</span>
                         </div>
-                        <div class="porogress-bar__item">
-                            <button type="button"  data-sort-by="color" class="progress-bar__btn">Closed Alpha-Testing</button>
+                        <div class="progress-bar__item is-active">
+                            <button type="button"  data-sort-by="color" class="progress-bar__btn">
+                                <span class="progress-bar__event">Closed Alpha-Testing</span>
+                            </button>
+                            <span class="progress-bar__date">September<br> 2017</span>
                         </div>
-                        <div class="porogress-bar__item">
-                            <button type="button" data-sort-by="color" class="progress-bar__btn" >To Leave Early Access</button>
+                        <div class="progress-bar__item">
+                            <button type="button" data-sort-by="color" class="progress-bar__btn" >
+                                <span class="progress-bar__event">To Leave<br> Early Access</span>
+                            </button>
+                            <span class="progress-bar__date">September<br> 2017</span>
                         </div>
-                        <div class="porogress-bar__item">
-                            <button type="button" data-sort-by="color" class="progress-bar__btn" >Beta</button>
+                        <div class="progress-bar__item">
+                            <button type="button" data-sort-by="color" class="progress-bar__btn">
+                                <span class="progress-bar__event">Beta</span>
+                            </button>
+                            <span class="progress-bar__date">September<br> 2017</span>
                         </div>
-                        <div class="porogress-bar__item">
-                            <button type="button" data-sort-by="color" class="progress-bar__btn" >Later</button>
+                        <div class="progress-bar__item">
+                            <button type="button" data-sort-by="color" class="progress-bar__btn" >
+                                <span class="progress-bar__event">Later</span>
+                            </button>
+                            <span class="progress-bar__date">September<br> 2017</span>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,29 @@
+.input-wrap
+    position: 
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    align-items: stretch
+    margin-bottom: 1.25rem
+
+.form-input
+    display: block
+    width: 100%
+    padding: .5rem 1rem
+    font-size: 1rem
+    line-height: 1.5
+    color: $base-font-color
+    background-color: $white
+    background-clip: padding-box
+    border: $border-width solid $border-color
+    border-radius: 0
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
+    font-family: $base-font-family
+    +placeholder
+        font-size: .875rem
+        font-weight: light
+        color: #b0b0b0
+
+textarea
+    resize: none
+    min-height: 130px

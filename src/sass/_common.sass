@@ -60,3 +60,39 @@ img
   flex-direction: column
   justify-content: space-between
 
+.page-title
+  text-transform: uppercase
+  font-size: 3.75rem
+  font-weight: bold
+  line-height: 1.2
+  position: relative
+  margin-bottom: 3.75rem
+  overflow: hidden
+  +q(1140)
+    overflow: visible
+  &__text
+    position: relative
+    padding: 3.5rem 0
+    display: inline-block
+    z-index: 100
+  &__bg
+    z-index: 10
+    position: absolute
+    font-size: 2.8em
+    line-height: 1
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    color: $subtitle-color
+    +q(1400)
+      left: -12%
+  &__bg:before
+    position: absolute
+    content: ''
+    height: 20px
+    width: 100%
+    left: -105%
+    top: 0
+    bottom: 0
+    margin: auto
+    background-color: $yellow

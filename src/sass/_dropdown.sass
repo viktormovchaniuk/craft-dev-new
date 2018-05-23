@@ -1,0 +1,40 @@
+.dropdown
+    position: relative
+    &__menu
+        position: absolute
+        top: 100%
+        left: 0
+        z-index: 1000
+        // display: none;
+        min-width: 3.875rem
+        font-size: 1rem
+        color: $white
+        font-weight: bold
+        text-align: left
+        list-style: none
+        background-color: $bg-dark
+        background-clip: padding-box
+    &__item
+        display: block
+        width: 100%
+        text-align: center
+        white-space: nowrap
+        padding: .625rem 1.25rem
+    &__toggle
+        padding: .625rem 1.25rem
+        border: none
+        position: relative
+    &__toggle:after
+        position: absolute
+        content: ''
+        width: 6px
+        height: 6px
+        border-bottom: 2px solid $white
+        border-right: 2px solid $white
+        transform-origin: center top
+        transform: rotate(45deg)
+        top: 0
+        right: 5px
+        bottom: 0
+        margin: auto
+        

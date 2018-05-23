@@ -10,163 +10,239 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,700&amp;subset=cyrillic,cyrillic-ext,greek-ext,latin-ext" rel="stylesheet">
     <link rel="stylesheet" media="all" href="css/app.css"> </head>
   <body>
-    <!-- BEGIN content -->
-    <header class="main-header">
-      <div class="main-header__top">
+    <div class="page">
+      <header class="main-header">
         <div class="container">
-          <div class="main-header__top-inner">
-            <div class="main-header__logo">
-              <a href="index.html">
-                <img src="img/newlogo.png" alt="CraftDevelopment"> </a>
+          <div class="row jc-space-between ai-center">
+            <div class="main-logo">
+              <a class="logo" href="#">
+                <img width="145" height="50" class="logo__img" src="img/logo.png" alt="CraftDevelopment"> </a>
             </div>
-            <nav class="main-nav" id="nav">
-              <ul class="main-nav__list">
-                <li class="main-nav__list-item">
-                  <a href="index.html">Main</a>
+            <nav class="main-nav">
+              <ul class="nav-links">
+                <li class="nav-item">
+                  <a href="#">Main</a>
                 </li>
-                <li class="main-nav__list-item">
-                  <a href="blog.php">DevBlog</a>
+                <li class="nav-item">
+                  <a href="#">DevBlog</a>
                 </li>
-                <li class="main-nav__list-item">
-                  <a href="roadmap.html">Roadmap</a>
-                </li>
-                <li class="social__content">
-                  <a href="https://www.facebook.com/CraftDevelop/?fref=ts">Facebook</a>
-                  <a href="https://twitter.com/CraftDevelop?lang=uk">Twitter</a>
-                  <a href="https://www.instagram.com/craftdevelopment/">Instagram</a>
+                <li class="nav-item">
+                  <a href="#">Roadmap</a>
                 </li>
               </ul>
-              <!-- <div class="lang-mobile">
-                        <a class="active-lang" href="#">RU</a>
-                        <a href="#">UA</a>
-                    </div> -->
+              <ul class="social-links">
+                <li class="nav-item">
+                  <a href="#">Facebook</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Twitter</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Instagram</a>
+                </li>
+              </ul>
+              <div class="dropdown">
+                <button class="btn btn--dark dropdown__toggle" type="button"> Eng </button>
+                <div class="dropdown__menu">
+                  <a class="dropdown__item" href="#">Eng</a>
+                  <a class="dropdown__item" href="#">Rus</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown__toggle" type="button"> Eng </button>
+                <div class="dropdown__menu">
+                  <a class="dropdown__item" href="#">Eng</a>
+                  <a class="dropdown__item" href="#">Rus</a>
+                </div>
+              </div>
             </nav>
-            <!-- <div class="select-wrap">
-                    <button type="button" class="btn--lang-dropdown" id="btn--lang">RU <i class="carret"> </i></button>
-                    <div class="select-content lang" id="lang-dropdown">
-                        <a class="active-lang" href="#">RU</a>
-                        <a href="#">UA</a>
-                    </div>
-                </div> -->
-            <div class="main-nav__toogle" id="toogle-btn">
-              <span class="main-nav__toogle-item"></span>
+            <button type="button" class="toggler">
+              <span class="toggler__item"></span>
+              <span class="toggler__item"></span>
+              <span class="toggler__item"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <!-- BEGIN content -->
+      <section class="roadmap">
+        <div class="container">
+          <h1 class="page-title">
+            <span class="page-title__text">Roadmap</span>
+            <span class="page-title__bg">Roadmap</span>
+          </h1>
+          <div class="tags">
+            <div class="tags__item">
+              <span class="tag">MACH 3</span>
+            </div>
+            <div class="tags__item">
+              <span class="tag tag--active">stay alive: survival</span>
+            </div>
+          </div>
+          <div id="roadmap" class="roadmap">
+            <div class="progress-bar">
+              <div class="progress-bar__row">
+                <div class="progress-bar__item">
+                  <button type="button" data-sort-by="color" class="progress-bar__btn is-checked">
+                    <span class="progress-bar__event">Idea</span>
+                  </button>
+                  <span class="progress-bar__date">September
+                    <br> 2017</span>
+                </div>
+                <div class="progress-bar__item is-active">
+                  <button type="button" data-sort-by="color" class="progress-bar__btn">
+                    <span class="progress-bar__event">Closed Alpha-Testing</span>
+                  </button>
+                  <span class="progress-bar__date">September
+                    <br> 2017</span>
+                </div>
+                <div class="progress-bar__item">
+                  <button type="button" data-sort-by="color" class="progress-bar__btn">
+                    <span class="progress-bar__event">To Leave
+                      <br> Early Access</span>
+                  </button>
+                  <span class="progress-bar__date">September
+                    <br> 2017</span>
+                </div>
+                <div class="progress-bar__item">
+                  <button type="button" data-sort-by="color" class="progress-bar__btn">
+                    <span class="progress-bar__event">Beta</span>
+                  </button>
+                  <span class="progress-bar__date">September
+                    <br> 2017</span>
+                </div>
+                <div class="progress-bar__item">
+                  <button type="button" data-sort-by="color" class="progress-bar__btn">
+                    <span class="progress-bar__event">Later</span>
+                  </button>
+                  <span class="progress-bar__date">September
+                    <br> 2017</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid" style="margin-top: 20px;">
+            <div class="grid-sizer"></div>
+            <div class="gutter-sizer"></div>
+            <div class="grid-item" data-color="">
+              <div class="card">
+                <div class="card__header">
+                  <span class="card__header-text">New</span>
+                </div>
+                <div class="card__body">
+                  <h4 class="card__body-title">The technique of mapping the map</h4>
+                  <p class="card__body-text"> You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will be getting tunnels,
+                    and more </p>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-color="">
+              <div class="card">
+                <div class="card__header">
+                  <span class="card__header-text">New</span>
+                </div>
+                <div class="card__body">
+                  <h4 class="card__body-title">Improve the logic of collecting resources with an inventory tool available</h4>
+                  <p class="card__body-text"> </p>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-color="">
+              <div class="card">
+                <div class="card__header">
+                  <span class="card__header-text">New</span>
+                </div>
+                <div class="card__body">
+                  <h4 class="card__body-title">The technique of mapping the map</h4>
+                  <p class="card__body-text"> You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will be getting tunnels,
+                    and more </p>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-color="">
+              <div class="card">
+                <div class="card__header">
+                  <span class="card__header-text">New</span>
+                </div>
+                <div class="card__body">
+                  <h4 class="card__body-title">Improve the logic of collecting resources with an inventory tool available Improve the logic of collecting resources with an inventory tool available</h4>
+                  <p class="card__body-text"> You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will be getting tunnels,
+                    and more </p>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-color="">
+              <div class="card">
+                <div class="card__header">
+                  <span class="card__header-text">New</span>
+                </div>
+                <div class="card__body">
+                  <h4 class="card__body-title">The technique of mapping the map</h4>
+                  <p class="card__body-text"> You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will be getting tunnels,
+                    and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will be getting
+                    tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will
+                    be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the
+                    Airfield will be getting tunnels, and more </p>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-color="">
+              <div class="card">
+                <div class="card__header">
+                  <span class="card__header-text">Done</span>
+                </div>
+                <div class="card__body">
+                  <h4 class="card__body-title">The technique of mapping the map</h4>
+                  <p class="card__body-text"> You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will be getting tunnels,
+                    and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will be getting
+                    tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will
+                    be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the
+                    Airfield will be getting tunnels, and more </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-    <section class="roadmap">
-      <div class="container">
-        <h3 class="section-title roadmap-title">ROADMAP</h3>
-        <div class="blog-tags">
-          <a class="blog-tags__link blog-tags__link--active" href="#">stay alive: survival</a>
-          <a class="blog-tags__link" href="#">MACH 3</a>
-        </div>
-        <div id="roadmap" class="roadmap">
-          <div class="progress-bar">
-            <div class="progress-bar__row">
-              <div class="porogress-bar__item">
-                <button type="button" data-sort-by="color" class="progress-bar__btn is-checked">Idea</button>
+      </section>
+      <!-- END content -->
+      <footer class="main-footer">
+        <div class="container">
+          <div class="main-footer__wrap">
+            <div class="main-footer-item">
+              <button class="btn btn--transition btn--dark" type="button">Leave Message</button>
+            </div>
+            <div class="main-footer-item">
+              <div class="contacts">
+                <div class="contacts__item">
+                  <div class="contact">
+                    <b class="contact__title">Skype:</b>
+                    <span class="contact__text">craftdevelop</span>
+                  </div>
+                </div>
+                <div class="contacts__item">
+                  <div class="contact">
+                    <b class="contact__title">Viber/WhatsApp:</b>
+                    <span class="contact__text">+38 (097) 838-35-35</span>
+                  </div>
+                </div>
+                <div class="contacts__item">
+                  <div class="contact">
+                    <b class="contact__title">E-mail:</b>
+                    <span class="contact__text">team@craftdevelop.com</span>
+                  </div>
+                </div>
               </div>
-              <div class="porogress-bar__item">
-                <button type="button" data-sort-by="color" class="progress-bar__btn">Closed Alpha-Testing</button>
-              </div>
-              <div class="porogress-bar__item">
-                <button type="button" data-sort-by="color" class="progress-bar__btn">To Leave Early Access</button>
-              </div>
-              <div class="porogress-bar__item">
-                <button type="button" data-sort-by="color" class="progress-bar__btn">Beta</button>
-              </div>
-              <div class="porogress-bar__item">
-                <button type="button" data-sort-by="color" class="progress-bar__btn">Later</button>
+            </div>
+            <div class="main-footer-item main-footer-item--first">
+              <div class="copy">
+                <span class="text-yellow">Craft Development</span> All rights reserved.
+                <a href="#" class="copy__link">Privacy policy</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="grid" style="margin-top: 20px;">
-          <div class="grid-sizer"></div>
-          <div class="gutter-sizer"></div>
-          <div class="grid-item" data-color="">
-            <div class="card">
-              <div class="card__header">
-                <span class="card__header-text">New</span>
-              </div>
-              <div class="card__body">
-                <h4 class="card__body-title">The technique of mapping the map</h4>
-                <p class="card__body-text"> You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will be getting tunnels,
-                  and more </p>
-              </div>
-            </div>
-          </div>
-          <div class="grid-item" data-color="">
-            <div class="card">
-              <div class="card__header">
-                <span class="card__header-text">New</span>
-              </div>
-              <div class="card__body">
-                <h4 class="card__body-title">Improve the logic of collecting resources with an inventory tool available</h4>
-                <p class="card__body-text"> </p>
-              </div>
-            </div>
-          </div>
-          <div class="grid-item" data-color="">
-            <div class="card">
-              <div class="card__header">
-                <span class="card__header-text">New</span>
-              </div>
-              <div class="card__body">
-                <h4 class="card__body-title">The technique of mapping the map</h4>
-                <p class="card__body-text"> You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will be getting tunnels,
-                  and more </p>
-              </div>
-            </div>
-          </div>
-          <div class="grid-item" data-color="">
-            <div class="card">
-              <div class="card__header">
-                <span class="card__header-text">New</span>
-              </div>
-              <div class="card__body">
-                <h4 class="card__body-title">Improve the logic of collecting resources with an inventory tool available Improve the logic of collecting resources with an inventory tool available</h4>
-                <p class="card__body-text"> You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will be getting tunnels,
-                  and more </p>
-              </div>
-            </div>
-          </div>
-          <div class="grid-item" data-color="">
-            <div class="card">
-              <div class="card__header">
-                <span class="card__header-text">New</span>
-              </div>
-              <div class="card__body">
-                <h4 class="card__body-title">The technique of mapping the map</h4>
-                <p class="card__body-text"> You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will be getting tunnels,
-                  and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will be getting
-                  tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will
-                  be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield
-                  will be getting tunnels, and more </p>
-              </div>
-            </div>
-          </div>
-          <div class="grid-item" data-color="">
-            <div class="card">
-              <div class="card__header">
-                <span class="card__header-text">Done</span>
-              </div>
-              <div class="card__body">
-                <h4 class="card__body-title">The technique of mapping the map</h4>
-                <p class="card__body-text"> You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will be getting tunnels,
-                  and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will be getting
-                  tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield will
-                  be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We&#39;ve optimised the fire fight lag, the Airfield
-                  will be getting tunnels, and more </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END content -->
+      </footer>
+    </div>
     <!-- BEGIN scripts -->
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
