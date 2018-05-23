@@ -1,0 +1,75 @@
+.btn
+    display: inline-block
+    font-weight: 700
+    text-align: center
+    white-space: nowrap
+    vertical-align: middle
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    border: $border-width solid $border-color
+    padding: .575rem 1.625rem
+    color: $base-font-color
+    background-color: transparent
+    font-size: 0.875rem
+    text-transform: uppercase
+    line-height: 1.5
+    transition: all .15s
+
+.btn:hover
+    text-decoration: none
+
+.btn--primary
+    background-color: rgba($bg-dark, .75)
+
+.btn--secondary
+    background-color: rgba($yellow, .75)
+
+.btn--transition
+    position: relative
+
+.btn--transition:after
+    content: ''
+    position: absolute
+    top: -2px
+    right: -2px
+    width: 50%
+    height: 50%
+    border-top: 2px solid $yellow
+    border-right: 2px solid $yellow
+    transition: .3s 
+
+.btn--transition:before
+    content: ''
+    position: absolute
+    bottom: -2px
+    left: -2px
+    width: 50%
+    height: 50%
+    border-bottom: 2px solid $yellow
+    border-left: 2px solid $yellow
+    transition: .2s 
+
+.btn--transition:hover:before
+    width: calc(100% + 4px)
+    height: calc(100% + 4px)
+
+    
+.btn--transition:hover:after
+    width: calc(100% + 4px)
+    height: calc(100% + 4px)
+
+.btn--block
+    width: 100%
+    display: block
+
+.btn--lg
+    padding: 1.125rem 1rem
+    font-size: 1.125rem
+
+.btn--light
+    color: $base-font-color
+
+.btn--dark
+    color: $white

@@ -1,39 +1,55 @@
 <header class="main-header">
-    <div class="main-header__top">
-        <div class="container">
-            <div class="main-header__top-inner">
-                <div class="main-header__logo">
-                    <a href="index.html">
-                        <img src="img/newlogo.png" alt="CraftDevelopment">
-                        </a>
-                </div>
-                <nav class="main-nav" id="nav">
-                    <ul class="main-nav__list">
-                        <li class="main-nav__list-item"><a href="index.html">Main</a></li>
-                        <li class="main-nav__list-item"><a href="blog.php">DevBlog</a></li>
-                        <li class="main-nav__list-item"><a href="roadmap.html">Roadmap</a></li>
-                        <li class="social__content">
-                            <a href="https://www.facebook.com/CraftDevelop/?fref=ts">Facebook</a>
-                            <a href="https://twitter.com/CraftDevelop?lang=uk">Twitter</a>
-                            <a href="https://www.instagram.com/craftdevelopment/">Instagram</a>
-                        </li>				
-                    </ul>
-                    <!-- <div class="lang-mobile">
-                        <a class="active-lang" href="#">RU</a>
-                        <a href="#">UA</a>
-                    </div> -->
-                </nav>
-                <!-- <div class="select-wrap">
-                    <button type="button" class="btn--lang-dropdown" id="btn--lang">RU <i class="carret"> </i></button>
-                    <div class="select-content lang" id="lang-dropdown">
-                        <a class="active-lang" href="#">RU</a>
-                        <a href="#">UA</a>
-                    </div>
-                </div> -->
-                <div class="main-nav__toogle" id="toogle-btn">
-                    <span class="main-nav__toogle-item"></span>
-                </div>
+    <div class="container">
+        <div class="row jc-space-between ai-center">
+            <div class="main-logo">
+                <a class="logo" href="#">
+                    <img 
+                        width="145" 
+                        height="50" 
+                        class="logo__img" 
+                        src="img/logo.png" 
+                        alt="CraftDevelopment"
+                    >
+                </a>
             </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="#">Main</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">DevBlog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Roadmap</a>
+                    </li>
+                </ul>
+                <ul class="social-links">
+                    <li class="nav-item">
+                        <a href="#">Facebook</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Twitter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Instagram</a>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <button class="dropdown__toggle" type="button">
+                      Eng
+                    </button>
+                    <div class="dropdown__menu">
+                      <a class="dropdown__item" href="#">Eng</a>
+                      <a class="dropdown__item" href="#">Rus</a>
+                    </div>
+                  </div>
+            </nav>
+            <button type="button" class="toggler">
+                <span class="toggler__item"></span>
+                <span class="toggler__item"></span>
+                <span class="toggler__item"></span>
+            </button>
         </div>
     </div>
 </header>

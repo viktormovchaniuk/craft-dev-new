@@ -1,5 +1,62 @@
-body
-	background: #FFF
-	+css-lock(16, 50, 600, 1000)
-	line-height: 1.4
+html 
+  font-family: $base-font-family
+  line-height: $base-line-height
+  word-spacing: 1px
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  box-sizing: border-box
+
+*, *:before, *:after 
+	box-sizing: border-box
+
+body 
+  margin: 0
+  font-size: .875rem
+  color: $base-font-color
+  background-color: $bg-main
+  +q(900)
+    font-size: 1rem
+
+.container 
+  width: 100%
+  padding-right: 10px
+  padding-left: 10px
+  margin-right: auto
+  margin-left: auto
+  max-width: 1140px
+
+.row 
+  display: flex
+  flex-wrap: wrap
+  // margin-right: -10px
+  // margin-left: -10px
+
+a 
+  text-decoration: none
+  color: $link-color
+
+a:hover,
+a:active
+  text-decoration: underline
+
+img
+  max-width: 100%
+  height: auto
+
+.jc-space-between
+  justify-content: space-between
+
+.ai-center
+  align-items: center
+
+.text-yellow
+  color: $yellow
+
+.page
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: space-between
 

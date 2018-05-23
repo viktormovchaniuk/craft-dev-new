@@ -5,8 +5,29 @@ title: Index page
 
 {% block content %}
 	
-	{# partial example #}
-	{% include "partials/_header.html" %}
+	
+
+	<main class="main-content">
+		<div class="container">
+			<div class="app">
+				<div class="app__header">
+					<a class="btn btn--secondary btn--block btn--lg" href="https://docs.google.com/forms/d/e/1FAIpQLSf-Q8vDA_2AOmVZvmqsM3wFZWb7X6462oLOX2LPMXfRhShHSw/viewform">Register for closed alpha-testing</a>
+					<a class="btn btn--primary btn--block btn--lg" href="blog.php">Developers Blog</a>
+				</div>
+				<div class="app__body">
+					<span class="app__text">Soon on...</span>
+				</div>
+				<div class="app__footer">
+					<a href="#">
+						<img src="img/apple.png" alt="AppleStore">
+					</a>
+					<a href="#">
+						<img src="img/google.png" alt="GoogleStore">
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
 
 
 {% endblock %}

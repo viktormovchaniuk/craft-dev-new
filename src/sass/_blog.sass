@@ -1,0 +1,54 @@
+.article
+    box-shadow: $box-shadow
+    margin-bottom: 2rem
+    border: 1px solid $border-color
+    min-height: 320px
+    +q(900)
+        display: flex
+    &__img
+        padding: 1rem
+        +q(900)
+            flex: 1
+            padding: 0
+    &__content
+        padding: 1rem
+        +q(900)
+            flex: 2
+    &__link
+        display: block
+        height: 0
+        padding-bottom: 61%
+        background-repeat: no-repeat
+        background-size: cover
+        +q(900)
+            padding-bottom: 100%
+            background-position: right top
+            height: 100%
+            padding-bottom: 0
+    &__info
+        margin-left: auto
+        align-self: center
+    &__content-item
+        margin-bottom: 1rem
+    &__content-item:last-child
+        margin-bottom: 0
+    
+
+.tag
+    color: $white
+    text-transform: uppercase
+    font-size: .875rem
+    padding: .75em 1.75em
+    background-color: $yellow
+    display: inline-block
+
+.date, .view
+    padding-left: 35px
+    background-size: 15px
+
+.date
+    background: transparent url('../img/date.svg') 10px center no-repeat
+
+.view
+    background: transparent url('../img/view.svg') 5px center no-repeat
+   

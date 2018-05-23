@@ -1,18 +1,18 @@
 // width
-=r($width)
+=qmax($width)
   @media only screen and (max-width: $width+ "px")
     @content
 
-=rmin($width)
+=q($width)
   @media only screen and (min-width: $width+ "px")
     @content
 
 // height
-=rh($height)
+=qh($height)
   @media only screen and (max-height: $height + "px")
     @content
 
-=rhmin($height)
+=qhmin($height)
   @media only screen and (min-height: $height + "px")
     @content
 
