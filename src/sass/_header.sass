@@ -1,19 +1,21 @@
 .main-header 
     background-color: $bg-dark
     position: relative
+    padding: 0.5rem 0
     a
         color: $white
         text-decoration: none
     a:hover
         color: darken($white, 5%)
+    &__logo
+        +q(900)
+            margin-right: 50px
+        +q(1000)
+            margin-right: 120px
+
 
 .logo
     display: inline-block
-    padding: 0.5rem 0
-    +q(900)
-        margin-right: 50px
-    +q(1000)
-        margin-right: 120px
     &__img
         max-width: 100%
         display: inline-block
@@ -33,17 +35,28 @@
         height: 2px
         right: 0
         left: 0
+        top: 0
+        bottom: 0
         width: 80%
         margin: auto
         border-radius: 3px
         background-color: $white
-    &__item:nth-child(1)
-        top: 10px
+        transition: .4s
+    &__item:nth-child(1)    
+        transform: translateY(-10px)
     &__item:nth-child(2)
-        top: 0
-        bottom: 0
+        opacity: 1
     &__item:nth-child(3)
-        bottom: 10px
+        transform: translateY(10px)
+
+.toggler.is-active
+    .toggler__item:nth-child(1)
+        transform: rotate(-45deg)
+    .toggler__item:nth-child(2)
+        opacity: 0
+    .toggler__item:nth-child(3)
+        transform: rotate(45deg)
+
 
 .main-nav
     display: none
@@ -52,12 +65,14 @@
     left: 10px
     right: 10px
     background-color: $bg-dark
-    transform-origin: top
+    z-index: 10000
     +q(900)
         position: static
         display: flex
         flex: 1
         justify-content: space-between
+        align-items: center
+
 
 .nav-links
     list-style: none

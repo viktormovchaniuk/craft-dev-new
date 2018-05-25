@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Index page</title>
+    <title>Roadmap page</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -14,7 +14,7 @@
       <header class="main-header">
         <div class="container">
           <div class="row jc-space-between ai-center">
-            <div class="main-logo">
+            <div class="main-header__logo">
               <a class="logo" href="#">
                 <img width="145" height="50" class="logo__img" src="img/logo.png" alt="CraftDevelopment"> </a>
             </div>
@@ -48,13 +48,6 @@
                   <a class="dropdown__item" href="#">Rus</a>
                 </div>
               </div>
-              <div class="dropdown">
-                <button class="dropdown__toggle" type="button"> Eng </button>
-                <div class="dropdown__menu">
-                  <a class="dropdown__item" href="#">Eng</a>
-                  <a class="dropdown__item" href="#">Rus</a>
-                </div>
-              </div>
             </nav>
             <button type="button" class="toggler">
               <span class="toggler__item"></span>
@@ -81,40 +74,34 @@
           </div>
           <div id="roadmap" class="roadmap">
             <div class="progress-bar">
-              <div class="progress-bar__row">
+              <div id="filters" class="progress-bar__row">
                 <div class="progress-bar__item">
-                  <button type="button" data-sort-by="color" class="progress-bar__btn is-checked">
-                    <span class="progress-bar__event">Idea</span>
-                  </button>
+                  <span class="progress-bar__event">Idea</span>
+                  <button type="button" data-sort-by="idea" class="progress-bar__btn is-checked"></button>
                   <span class="progress-bar__date">September
                     <br> 2017</span>
                 </div>
                 <div class="progress-bar__item is-active">
-                  <button type="button" data-sort-by="color" class="progress-bar__btn">
-                    <span class="progress-bar__event">Closed Alpha-Testing</span>
-                  </button>
+                  <span class="progress-bar__event">Closed Alpha-Testing</span>
+                  <button type="button" data-sort-by="alpha" class="progress-bar__btn"></button>
                   <span class="progress-bar__date">September
                     <br> 2017</span>
                 </div>
                 <div class="progress-bar__item">
-                  <button type="button" data-sort-by="color" class="progress-bar__btn">
-                    <span class="progress-bar__event">To Leave
-                      <br> Early Access</span>
-                  </button>
+                  <span class="progress-bar__event">To Leave Early Access</span>
+                  <button type="button" data-sort-by="access" class="progress-bar__btn"></button>
                   <span class="progress-bar__date">September
                     <br> 2017</span>
                 </div>
                 <div class="progress-bar__item">
-                  <button type="button" data-sort-by="color" class="progress-bar__btn">
-                    <span class="progress-bar__event">Beta</span>
-                  </button>
+                  <span class="progress-bar__event">Beta</span>
+                  <button type="button" data-sort-by="beta" class="progress-bar__btn"></button>
                   <span class="progress-bar__date">September
                     <br> 2017</span>
                 </div>
                 <div class="progress-bar__item">
-                  <button type="button" data-sort-by="color" class="progress-bar__btn">
-                    <span class="progress-bar__event">Later</span>
-                  </button>
+                  <span class="progress-bar__event">Later</span>
+                  <button type="button" data-sort-by="later" class="progress-bar__btn"></button>
                   <span class="progress-bar__date">September
                     <br> 2017</span>
                 </div>
@@ -124,10 +111,10 @@
           <div class="grid" style="margin-top: 20px;">
             <div class="grid-sizer"></div>
             <div class="gutter-sizer"></div>
-            <div class="grid-item" data-color="">
+            <div class="grid-item idea">
               <div class="card">
                 <div class="card__header">
-                  <span class="card__header-text">New</span>
+                  <span class="card__header-text">idea</span>
                 </div>
                 <div class="card__body">
                   <h4 class="card__body-title">The technique of mapping the map</h4>
@@ -136,10 +123,10 @@
                 </div>
               </div>
             </div>
-            <div class="grid-item" data-color="">
+            <div class="grid-item access">
               <div class="card">
                 <div class="card__header">
-                  <span class="card__header-text">New</span>
+                  <span class="card__header-text">access</span>
                 </div>
                 <div class="card__body">
                   <h4 class="card__body-title">Improve the logic of collecting resources with an inventory tool available</h4>
@@ -147,10 +134,10 @@
                 </div>
               </div>
             </div>
-            <div class="grid-item" data-color="">
+            <div class="grid-item idea">
               <div class="card">
                 <div class="card__header">
-                  <span class="card__header-text">New</span>
+                  <span class="card__header-text">idea</span>
                 </div>
                 <div class="card__body">
                   <h4 class="card__body-title">The technique of mapping the map</h4>
@@ -159,10 +146,10 @@
                 </div>
               </div>
             </div>
-            <div class="grid-item" data-color="">
+            <div class="grid-item beta">
               <div class="card">
                 <div class="card__header">
-                  <span class="card__header-text">New</span>
+                  <span class="card__header-text">beta</span>
                 </div>
                 <div class="card__body">
                   <h4 class="card__body-title">Improve the logic of collecting resources with an inventory tool available Improve the logic of collecting resources with an inventory tool available</h4>
@@ -171,10 +158,10 @@
                 </div>
               </div>
             </div>
-            <div class="grid-item" data-color="">
+            <div class="grid-item later">
               <div class="card">
                 <div class="card__header">
-                  <span class="card__header-text">New</span>
+                  <span class="card__header-text">later</span>
                 </div>
                 <div class="card__body">
                   <h4 class="card__body-title">The technique of mapping the map</h4>
@@ -186,10 +173,10 @@
                 </div>
               </div>
             </div>
-            <div class="grid-item" data-color="">
+            <div class="grid-item beta">
               <div class="card">
                 <div class="card__header">
-                  <span class="card__header-text">Done</span>
+                  <span class="card__header-text">beta</span>
                 </div>
                 <div class="card__body">
                   <h4 class="card__body-title">The technique of mapping the map</h4>
@@ -244,8 +231,7 @@
       </footer>
     </div>
     <!-- BEGIN scripts -->
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script defer type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>
 </html>

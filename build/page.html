@@ -10,14 +10,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,700&amp;subset=cyrillic,cyrillic-ext,greek-ext,latin-ext" rel="stylesheet">
     <link rel="stylesheet" media="all" href="css/app.css"> </head>
   <body>
-    <div class="page">
+    <div class="page front-page">
       <header class="main-header">
         <div class="container">
           <div class="row jc-space-between ai-center">
-            <div class="main-logo">
-              <a class="logo" href="#">
-                <img width="145" height="50" class="logo__img" src="img/logo.png" alt="CraftDevelopment"> </a>
-            </div>
+            <div class="main-header__logo">
+              <img width="145" height="50" class="logo__img" src="img/logo.png" alt="CraftDevelopment"> </div>
             <nav class="main-nav">
               <ul class="nav-links">
                 <li class="nav-item">
@@ -43,13 +41,6 @@
               </ul>
               <div class="dropdown">
                 <button class="btn btn--dark dropdown__toggle" type="button"> Eng </button>
-                <div class="dropdown__menu">
-                  <a class="dropdown__item" href="#">Eng</a>
-                  <a class="dropdown__item" href="#">Rus</a>
-                </div>
-              </div>
-              <div class="dropdown">
-                <button class="dropdown__toggle" type="button"> Eng </button>
                 <div class="dropdown__menu">
                   <a class="dropdown__item" href="#">Eng</a>
                   <a class="dropdown__item" href="#">Rus</a>
@@ -157,8 +148,7 @@
       </footer>
     </div>
     <!-- BEGIN scripts -->
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script defer type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>
 </html>

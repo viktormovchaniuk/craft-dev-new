@@ -26,6 +26,9 @@ function createConfig(env) {
       filename: '[name].js',
       publicPath: 'js/',
     },
+    devServer: {
+      overlay: true,
+    },
     devtool: isProduction ?
       '#source-map' :
       '#cheap-module-eval-source-map',
@@ -44,8 +47,9 @@ function createConfig(env) {
       }),
       new webpack.ProvidePlugin({
         $: 'jquery',
-        jQuery: 'jquery',
+        jQuery: ['jquery', 'default'],
         'window.jQuery': 'jquery',
+        // Popper: ['popper.js', 'default']
       }),
       new webpack.NoEmitOnErrorsPlugin(),
 

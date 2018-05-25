@@ -1,14 +1,9 @@
-.roadmap
-    
-    
-    
 .progress-bar
-    padding: 30px 0
+    padding: 50px 0
     &__row
         display: flex
         justify-content: space-between
         position: relative
-        margin: 0 -10px
     &__row:before
         position: absolute
         content: ''
@@ -20,64 +15,51 @@
         right: 10px
         margin: auto
     &__item
-        position: relative
-        display: flex
         flex: 1
-        justify-content: flex-end
-    &__item:first-child
-        flex: 0
-    &__item.is-active:before
-        position: absolute
-        content: ''
-        height: 8px
-        background-color: $yellow
-        top: 0
-        bottom: 0
-        margin: auto
-        left: -10px
-        width: 100%
-    &__btn
-        background-color: transparent
-        border: 2px solid transparent
-        width: 40px
-        height: 40px
-        border-radius: 50%
+        display: flex
         position: relative
-        z-index: 1000
-    &__btn:after
-        position: absolute
-        content: ''
+    &__item:last-child
+        flex: 0
+        .progress-bar__date, .progress-bar__event
+            right: 0
+            left: auto
+    &__btn
         width: 24px
         height: 24px
         border-radius: 50%
         background-color: $bg-dark
+        position: relative
         border: 2px solid $bg-dark
-        left: 0
-        top: 0
-        right: 0
-        bottom: 0
+    &__btn:after
+        position: absolute
+        content: ''
+        border: 2px solid $bg-dark
+        left: -50%
+        top: -50%
         margin: auto
-    &__btn.is-checked
-        border: 2px solid $bg-dark
+        border-radius: 50%
+        width: 40px
+        height: 40px
+        transform: scale(0)
+        transition: transform .3s cubic-bezier(0.09, 0.26, 0.52, 1.95)
+    &__btn.is-checked:after
+        transform: scale(1)
     &__event
         position: absolute
-        top: -35px
-        right: 0
         left: 0
-        margin: auto
+        bottom: 150%
         $color: $base-font-color
         font-size: .875rem
         font-weight: bold
-        white-space: nowrap
-        // transform: translateX(50%)
+        max-width: 90px
     &__date
         position: absolute
-        bottom: -40px
-        right: 0
+        left: 0
+        top: 150%
         font-weight: bold
         font-size: 0.875rem
         color: $disable-color
-        transform: translateX(50%)
+     
 
 .grid-item
     margin-bottom: 30px

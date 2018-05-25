@@ -1,8 +1,8 @@
 <header class="main-header">
     <div class="container">
         <div class="row jc-space-between ai-center">
-            <div class="main-logo">
-                <a class="logo" href="#">
+            <div class="main-header__logo">
+                {% if (title == 'Index page') %}
                     <img 
                         width="145" 
                         height="50" 
@@ -10,7 +10,17 @@
                         src="img/logo.png" 
                         alt="CraftDevelopment"
                     >
-                </a>
+                {% else %}
+                    <a class="logo" href="#">
+                        <img 
+                            width="145" 
+                            height="50" 
+                            class="logo__img" 
+                            src="img/logo.png" 
+                            alt="CraftDevelopment"
+                        >
+                    </a>
+                {% endif %}
             </div>
             <nav class="main-nav">
                 <ul class="nav-links">
@@ -44,15 +54,7 @@
                         <a class="dropdown__item" href="#">Rus</a>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <button class="dropdown__toggle" type="button">
-                        Eng
-                    </button>
-                    <div class="dropdown__menu">
-                        <a class="dropdown__item" href="#">Eng</a>
-                        <a class="dropdown__item" href="#">Rus</a>
-                    </div>
-                </div>
+              
             </nav>
             <button type="button" class="toggler">
                 <span class="toggler__item"></span>

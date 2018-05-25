@@ -1,5 +1,5 @@
 ---
-title: Index page
+title: Roadmap page
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -13,44 +13,7 @@ title: Index page
             </h1>
 
             {% include "partials/_tags.html" %}
-            
-            <div id="roadmap" class="roadmap">
-                <div class="progress-bar">
-                    <div class="progress-bar__row">
-                        <div class="progress-bar__item">
-                            <button type="button" data-sort-by="color" class="progress-bar__btn is-checked">
-                                <span class="progress-bar__event">Idea</span>
-                            </button>
-                            <span class="progress-bar__date">September<br> 2017</span>
-                        </div>
-                        <div class="progress-bar__item is-active">
-                            <button type="button"  data-sort-by="color" class="progress-bar__btn">
-                                <span class="progress-bar__event">Closed Alpha-Testing</span>
-                            </button>
-                            <span class="progress-bar__date">September<br> 2017</span>
-                        </div>
-                        <div class="progress-bar__item">
-                            <button type="button" data-sort-by="color" class="progress-bar__btn" >
-                                <span class="progress-bar__event">To Leave<br> Early Access</span>
-                            </button>
-                            <span class="progress-bar__date">September<br> 2017</span>
-                        </div>
-                        <div class="progress-bar__item">
-                            <button type="button" data-sort-by="color" class="progress-bar__btn">
-                                <span class="progress-bar__event">Beta</span>
-                            </button>
-                            <span class="progress-bar__date">September<br> 2017</span>
-                        </div>
-                        <div class="progress-bar__item">
-                            <button type="button" data-sort-by="color" class="progress-bar__btn" >
-                                <span class="progress-bar__event">Later</span>
-                            </button>
-                            <span class="progress-bar__date">September<br> 2017</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid" style="margin-top: 20px;">
+
             {% set 
                 grids = [
                     {
@@ -61,51 +24,85 @@ title: Index page
                     {
                         header: "New",
                         title: "The technique of mapping the map",
-                        event: "red",
+                        event: "idea",
                         text: "You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and more"
                     },
                     {
                         header: "New",
-                        event: "blue",
+                        event: "access",
                         title: "Improve the logic of collecting resources with an inventory tool available",
                         text: ""
                     },
                     {
                         header: "New",
                         title: "The technique of mapping the map",
-                        event: "green",
+                        event: "idea",
                         text: "You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and more"
                     },
                     {
                         header: "New",
                         title: "Improve the logic of collecting resources with an inventory tool available Improve the logic of collecting resources with an inventory tool available",
-                        event: "yellow",
+                        event: "beta",
                         text: "You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and more"
                     },
                     {
                         header: "New",
                         title: "The technique of mapping the map",
-                        event: "cyan",
+                        event: "later",
                         text: "You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and more"
                     },
                     {
                         header: "Done",
                         title: "The technique of mapping the map",
-                        event: "lime",
+                        event: "beta",
                         text: "You can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and moreYou can make your decisions 100% more dramatic with the paintable Spinner Wheel, climb around your base with the new new Netting, or cosy up on the remade bed. We've optimised the fire fight lag, the Airfield will be getting tunnels, and more"
                     }
                 ] 
             %} 
+            
+            <div id="roadmap" class="roadmap">
+                <div class="progress-bar">
+                    <div id="filters" class="progress-bar__row">
+                        <div class="progress-bar__item">
+                            <span class="progress-bar__event">Idea</span>
+                            <button type="button" data-sort-by="idea" class="progress-bar__btn is-checked"></button>
+                            <span class="progress-bar__date">September<br> 2017</span>
+                        </div>
+                        <div class="progress-bar__item is-active">
+                            <span class="progress-bar__event">Closed Alpha-Testing</span>
+                            <button type="button"  data-sort-by="alpha" class="progress-bar__btn"></button>
+                            <span class="progress-bar__date">September<br> 2017</span>
+                        </div>
+                        <div class="progress-bar__item">
+                            <span class="progress-bar__event">To Leave Early Access</span>
+                            <button type="button" data-sort-by="access" class="progress-bar__btn"></button>
+                            <span class="progress-bar__date">September<br> 2017</span>
+                        </div>
+                        <div class="progress-bar__item">
+                            <span class="progress-bar__event">Beta</span>
+                            <button type="button" data-sort-by="beta" class="progress-bar__btn"></button>
+                            <span class="progress-bar__date">September<br> 2017</span>
+                        </div>
+                        <div class="progress-bar__item">
+                            <span class="progress-bar__event">Later</span>
+                            <button type="button" data-sort-by="later" class="progress-bar__btn" ></button>
+                            <span class="progress-bar__date">September<br> 2017</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid" style="margin-top: 20px;">
+            
             {% for grid in grids %}
 
                 {% if loop.first  %}
                     <div class="grid-sizer"></div>
                     <div class="gutter-sizer"></div>
                 {% else %}
-                    <div class="grid-item" data-color="{{ grid.color }}">
+                    <div class="grid-item {{ grid.event }}">
                         <div class="card">
                             <div class="card__header">
-                                <span class="card__header-text">{{ grid.header }}</span>
+                                <span class="card__header-text">{{ grid.event }}</span>
                             </div>
                             <div class="card__body">
                                 <h4 class="card__body-title">{{ grid.title }}</h4>
