@@ -32,19 +32,19 @@
               </ul>
               <ul class="social-links">
                 <li class="nav-item">
-                  <a href="#">Facebook</a>
+                  <a class="btn btn--transition-simple" href="#">Facebook</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#">Twitter</a>
-                </li>
+                  <a class="btn btn--transition-simple" href="#">Twitter</a>
+                </li>-
                 <li class="nav-item">
-                  <a href="#">Instagram</a>
+                  <a class="btn btn--transition-simple" href="#">Instagram</a>
                 </li>
               </ul>
-              <div class="dropdown">
+              <div class="dropdown main-nav__dropdown">
                 <button class="btn btn--dark dropdown__toggle" type="button"> Eng </button>
                 <div class="dropdown__menu">
-                  <a class="dropdown__item" href="#">Eng</a>
+                  <a disabled class="dropdown__item dropdown__item--disabled" href="#">Eng</a>
                   <a class="dropdown__item" href="#">Rus</a>
                 </div>
               </div>
@@ -61,8 +61,8 @@
       <section class="blog">
         <div class="container">
           <h1 class="page-title">
-            <span class="page-title__text">Roadmap</span>
-            <span class="page-title__bg">Roadmap</span>
+            <span class="page-title__text">Craft Devblog</span>
+            <span class="page-title__bg">Devblog</span>
           </h1>
           <div class="blog-layout">
             <article class="article">
@@ -71,7 +71,7 @@
               </div>
               <div class="article__content">
                 <div class="article__content-item">
-                  <strong class="tag">Stay Alive</strong>
+                  <strong class="tag tag--active">Stay Alive</strong>
                 </div>
                 <div class="article__content-item">
                   <h2 class="article__title">Beginning of the closed testing of the game with subscribers. Start of the Early Access Google.</h2>
@@ -95,20 +95,51 @@
               </div>
               <div class="article__content">
                 <div class="article__content-item">
-                  <strong class="tag">Stay Alive</strong>
+                  <strong class="tag tag--active">Stay Alive</strong>
                 </div>
                 <div class="article__content-item">
-                  <h2>Beginning of the closed testing of the game with subscribers. Start of the Early Access Google.</h2>
+                  <h2 class="article__title">Beginning of the closed testing of the game with subscribers. Start of the Early Access Google.</h2>
                 </div>
                 <div class="article__content-item">
-                  <p>Quite soon our team will send out letters to everyone who registered for the closed testing Stay Alive with link to downloading the project for testing.</p>
-                  <p>Совсем скоро наша команда будет рассылать письма всем, кто регистрировался на закрытое тестирование Stay Alive, со ссылкой на скачивание проекта для тестирования.</p>
+                  <p class="article__text">Quite soon our team will send out letters to everyone who registered for the closed testing Stay Alive Quite soon our team will send out letters to everyone who registered for the closed testing Stay Alive with link to downloading the
+                    project for testing.</p>
+                  <p class="article__text">Quite soon our team will send out letters to everyone who registered for the closed testing Stay Alive Quite soon our team will send out letters to everyone who registered for the closed testing Stay Alive Совсем скоро наша команда будет
+                    рассылать письма всем, кто регистрировался на закрытое тестирование Stay Alive, со ссылкой на скачивание проекта для тестирования.</p>
                 </div>
-                <div class="article__content-item">
+                <div class="article__content-item row">
                   <a class="btn btn--transition btn--light" href="#">Read Article</a>
+                  <div class="article__info">
+                    <span class="date">30.04.2018</span>
+                    <span class="view">1000</span>
+                  </div>
                 </div>
               </div>
             </article>
+            <article class="article">
+              <div class="article__img">
+                <a class="article__link" href="#" style="background-image: url('img/article.jpg')"> </a>
+              </div>
+              <div class="article__content">
+                <div class="article__content-item">
+                  <strong class="tag tag--active">Stay Alive</strong>
+                </div>
+                <div class="article__content-item">
+                  <h2 class="article__title">Beginning of the closed testing of the game with subscribers. Start of the Early Access Google.</h2>
+                </div>
+                <div class="article__content-item">
+                  <p class="article__text">Quite soon our team will send out letters to everyone who registered for the closed testing Stay Alive with link to downloading the project for testing.</p>
+                  <p class="article__text">Совсем скоро наша команда будет рассылать письма всем, кто регистрировался на закрытое тестирование Stay Alive, со ссылкой на скачивание проекта для тестирования.</p>
+                </div>
+                <div class="article__content-item row">
+                  <a class="btn btn--transition btn--light" href="#">Read Article</a>
+                  <div class="article__info">
+                    <span class="date">30.04.2018</span>
+                    <span class="view">1000</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <button class="blog-layout__btn btn btn--transition-simple" type="button">Show More</button>
           </div>
         </div>
       </section>
@@ -117,7 +148,7 @@
         <div class="container">
           <div class="main-footer__wrap">
             <div class="main-footer-item">
-              <button class="btn btn--transition btn--dark" type="button">Leave Message</button>
+              <button id="modal-btn" class="btn btn--transition btn--dark" type="button">Leave Message</button>
             </div>
             <div class="main-footer-item">
               <div class="contacts">
@@ -150,6 +181,41 @@
           </div>
         </div>
       </footer>
+      <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button id="btn-close" type="button" class="btn btn--close"></button>
+            <form>
+              <div class="modal-header">
+                <b class="modal-header__title">Leave message</b>
+                <span class="modal-header__text">and we will definitely answer you</span>
+              </div>
+              <div class="modal-body">
+                <div class="modal-form">
+                  <div class="modal-form__item">
+                    <div class="input-wrap">
+                      <input class="form-input" placeholder="Name" type="text" /> </div>
+                  </div>
+                  <div class="modal-form__item">
+                    <div class="input-wrap">
+                      <input class="form-input not-valid" placeholder="E-mail" type="email" required/>
+                      <div class="invalid-feedback">Error: Your email address is invalid</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__item">
+                    <div class="input-wrap">
+                      <textarea class="form-input" placeholder="Your message" name="" id=""></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn--block btn--transition btn--light">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- BEGIN scripts -->
     <script defer type="text/javascript" src="js/app.js"></script>

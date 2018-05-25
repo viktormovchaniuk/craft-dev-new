@@ -1,3 +1,11 @@
+.blog-layout
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 3.75rem
+    &__btn
+        margin-top: 2.75rem
+    
 .article
     box-shadow: $box-shadow
     margin-bottom: 2rem
@@ -8,12 +16,25 @@
     &__img
         padding: 1rem
         +q(900)
-            flex: 1
+            flex: 1.5
             padding: 0
+        +q(1000)
+            flex: 1
     &__content
         padding: 1rem
         +q(900)
             flex: 2
+    &__title
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 1.375rem
+    &__text
+        margin-bottom: .75rem
+        color: $gray-3
+        display: -webkit-box
+        -webkit-line-clamp: 3
+        -webkit-box-orient: vertical; 
+        overflow: hidden
     &__link
         display: block
         height: 0
@@ -32,6 +53,9 @@
         margin-bottom: 1rem
     &__content-item:last-child
         margin-bottom: 0
+    .btn
+        padding-left: 3rem
+        padding-right: 3rem
     
 
 .tags
@@ -48,17 +72,19 @@
     color: $white
     text-transform: uppercase
     font-size: .875rem
-    padding: .625em 1.75em
+    padding: .5em 1.75em
     display: inline-block
     border: $border-width solid $yellow
     color: $base-font-color
     font-weight: 700
     
-
 .tag--active
     background-color: $yellow
     text-decoration: none
     color: $white
+
+.tag--lg
+    padding: .625rem 1.75rem
 
 .tag:hover
     text-decoration: none

@@ -4,7 +4,9 @@
     text-align: center
     color: #fff
     &__header
-        margin-bottom: 2rem
+        margin-bottom: 1rem
+        +q(900)
+            margin-bottom: 2rem
         .btn
             margin-bottom: 1rem
             font-size: .75rem
@@ -13,14 +15,18 @@
             +q(900)
                 font-size: 1.125rem
     &__body
-        margin-bottom: 2rem
+        margin-bottom: 1rem
+        +q(900)
+            margin-bottom: 2rem
     &__text
         font-size: 2rem
         text-shadow: 1px 1px 3px #333
         font-weight: 700
     &__footer
         display: flex
-        justify-content: space-between
+        flex-wrap: wrap
+        justify-content: center
+        justify-content: space-around
 
         
     

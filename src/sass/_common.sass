@@ -27,6 +27,9 @@ body
   margin-left: auto
   max-width: 1140px
 
+.container--small
+  max-width: 960px
+
 .row 
   display: flex
   flex-wrap: wrap
@@ -70,19 +73,25 @@ img
 
 .page-title
   text-transform: uppercase
-  font-size: 3.75rem
+  font-size: 1.75rem
   font-weight: bold
   line-height: 1.2
   position: relative
-  margin-bottom: 3.75rem
+  margin-bottom: 1.75rem
   overflow: hidden
+  +q(900)
+    margin-bottom: 3.75rem
+    font-size: 2.75rem
   +q(1140)
     overflow: visible
+    font-size: 3.75rem
   &__text
     position: relative
-    padding: 3.5rem 0
+    padding: 2.5rem 0
     display: inline-block
     z-index: 100
+    +q(900)
+      padding: 3.5rem 0
   &__bg
     z-index: 10
     position: absolute

@@ -8,6 +8,17 @@
     display: none
     overflow: hidden
     outline: 0
+    z-index: 1070
+
+.modal-overlay
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1040
+    background-color: #000
+    opacity: .75
     
 .modal-dialog
     max-width: 465px
@@ -18,8 +29,8 @@
 
 .modal-dialog .btn--close
     position: absolute
-    right: 0
-    top: 0
+    right: 5px
+    top: 5px
     transform: translate(0, 0)
     width: 30px
     height: 30px
@@ -32,10 +43,6 @@
         +q(600)
             background-color: $border-color
     
-    
-
-
-
 .modal-content
     background-color: $white
     box-shadow: $box-shadow
@@ -52,6 +59,7 @@
         font-size: 1.5rem
         font-weight: bold
         text-align: center
+        text-transform: uppercase
         +q(900)
             font-size: 2.5rem
     &__text
@@ -60,6 +68,30 @@
 
 .modal-footer
     margin-top: 3rem
+
+
+.modal-open
+    overflow: hidden
+
+.modal-open .modal 
+    overflow-x: hidden
+    overflow-y: auto
+
+.modal-body
+    position: relative
+
+.invalid-feedback
+    position: absolute
+    bottom: 0
+    left: 0
+    font-weight: bold
+    font-size: .875rem
+    color: $yellow
+    transform: translateY(110%)
+    display: none
+
+.modal input[type="email"].not-valid ~ .invalid-feedback
+    display: block
 
 
     

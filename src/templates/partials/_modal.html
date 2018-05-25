@@ -1,8 +1,8 @@
 <div class="modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <button type="button" class="btn btn--close"></button>
-            <form action="#">
+            <button id="btn-close" type="button" class="btn btn--close"></button>
+            <form>
                 <div class="modal-header">
                     <b class="modal-header__title">Leave message</b>
                     <span class="modal-header__text">and we will definitely answer you</span>
@@ -16,7 +16,8 @@
                         </div>
                         <div class="modal-form__item">
                             <div class="input-wrap">
-                                <input class="form-input" placeholder="E-mail" type="mail" />
+                                <input class="form-input not-valid" placeholder="E-mail" type="email" required/>
+                                <div class="invalid-feedback">Error: Your email address is invalid</div>
                             </div>
                         </div>
                         <div class="modal-form__item">

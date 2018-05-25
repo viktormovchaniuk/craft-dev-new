@@ -18,6 +18,16 @@
         flex: 1
         display: flex
         position: relative
+    &__item.is-active:before
+        position: absolute
+        top: 0
+        bottom: 0
+        content: ''
+        width: 100%
+        height: 8px
+        margin: auto
+        background-color: red
+        transform: translateX(-100%)
     &__item:last-child
         flex: 0
         .progress-bar__date, .progress-bar__event
@@ -27,13 +37,13 @@
         width: 24px
         height: 24px
         border-radius: 50%
-        background-color: $bg-dark
+        background-color: $gray-6
         position: relative
-        border: 2px solid $bg-dark
+        border: 2px solid $gray-6
     &__btn:after
         position: absolute
         content: ''
-        border: 2px solid $bg-dark
+        border: 2px solid $gray-6 
         left: -50%
         top: -50%
         margin: auto
@@ -60,7 +70,6 @@
         font-size: 0.875rem
         color: $disable-color
      
-
 .grid-item
     margin-bottom: 30px
 
@@ -105,3 +114,7 @@
         color: #868686
         font-weight: 300
         font-size: 1rem
+
+.grid-item.done
+    .card__header-text
+        background-color: #aaa
