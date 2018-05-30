@@ -6,10 +6,17 @@
 
 .progress-bar
     padding: 50px 0
+    margin-bottom: 1.75rem
+    display: flex
+    align-items: center
+    +q(900)
+        margin-bottom: 3.75rem
     &__row
         display: flex
+        flex: 1
         justify-content: space-between
         position: relative
+        margin: 0 20px
     &__row:before
         position: absolute
         content: ''
@@ -23,9 +30,9 @@
         z-index: -2
     &__item
         flex: 1
-        display: flex
         justify-content: flex-end
         position: relative
+        display: flex
     &__item:first-child
         flex: 0
     &__item.is-active ~ .progress-bar__item .progress-bar__btn
@@ -108,6 +115,7 @@
 .card
     background-color: #fff
     box-shadow: 0px 3px 6px 0px rgba(0, 11, 10, 0.05)
+    transition: box-shadow .3s ease-in-out
     &__header
         padding-bottom: 1rem
         padding-top: 2rem
@@ -133,6 +141,9 @@
         color: #868686
         font-weight: 300
         font-size: 1rem
+
+.card:hover
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.3)
 
 .grid-item.done
     .card__header-text

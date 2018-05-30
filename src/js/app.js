@@ -51,11 +51,6 @@ jQueryBridget( 'isotope', Isotope, $ );
     $('.modal-overlay').remove();
   });
 
-  // modalOverlay.on('click', function() {
-  //   modal.fadeOut();
-  //   $('body').removeClass('modal-open');
-  //   modalOverlay.fadeOut();
-  // });
 
 }());
 
@@ -80,9 +75,6 @@ var $grid = $('.grid').isotope({
 
 isActive.find('button').addClass('is-checked').trigger('click');
 
-
-// var $items = $('.grid').find('.grid-item');
-
 $('#filters').on( 'click', 'button', function() {
   var filterValue = $( this ).attr('data-filter');
   $grid.isotope({ filter: filterValue });
@@ -98,6 +90,33 @@ $('#filters').each( function( i, buttonGroup ) {
     $( this ).addClass('is-checked');
   });
 });
+
+
+// $(window).resize(function() {
+//   if ($(window).width() < 900) {
+//     isActive.prev().css('display', 'flex');
+//     isActive.css('display', 'flex');
+//     isActive.next().css('display', 'flex');
+//   }
+// });
+
+var a = $('#filters').children();
+
+function nextItem() {
+  
+}
+
+$('.next').on('click', function() {
+  for(var i = 0; i < a.length; i++) {
+    if( $(a[i]).hasClass('is-active') ) {
+      $(a[i]).removeClass('is-active');
+      $(a[i - 1]).addClass('is-active').find('button').trigger('click');;
+      return;
+    }
+  }
+});
+
+
 
 // var $newItems = $(`
 // <div class="grid-item access">

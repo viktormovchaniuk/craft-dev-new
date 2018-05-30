@@ -202,6 +202,7 @@ title: Roadmap page
             
             <div id="roadmap" class="roadmap">
                 <div class="progress-bar">
+                    <button class="btn btn--transition prev"><</button>
                     <div id="filters" class="progress-bar__row">
                         <div class="progress-bar__item">
                             <span class="progress-bar__event">Idea</span>
@@ -213,12 +214,12 @@ title: Roadmap page
                             <button type="button"  data-filter=".alpha" class="progress-bar__btn"></button>
                             <span class="progress-bar__date">September<br> 2017</span>
                         </div>
-                        <div class="progress-bar__item is-active">
+                        <div class="progress-bar__item ">
                             <span class="progress-bar__event">To Leave Early Access</span>
                             <button type="button" data-filter=".access" class="progress-bar__btn"></button>
                             <span class="progress-bar__date">September<br> 2017</span>
                         </div>
-                        <div class="progress-bar__item">
+                        <div class="progress-bar__item is-active">
                             <span class="progress-bar__event">Beta</span>
                             <button type="button" data-filter=".beta" class="progress-bar__btn"></button>
                             <span class="progress-bar__date">September<br> 2017</span>
@@ -229,9 +230,10 @@ title: Roadmap page
                             <span class="progress-bar__date">September<br> 2017</span>
                         </div>
                     </div>
+                    <button class="btn btn--transition next">></button>
                 </div>
             </div>
-            <div class="grid" style="margin-top: 20px;">
+            <div class="grid">
             
             {% for grid in grids %}
 
