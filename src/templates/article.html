@@ -1,4 +1,9 @@
---- title: Article page --- {% extends "layouts/_layout.html" %} {% block content %}
+--- 
+title: Article page 
+--- 
+{% extends "layouts/_layout.html" %} 
+
+{% block content %}
 <section class="blog">
   <div class="container container--small">
     <h1 class="page-title">
@@ -22,17 +27,12 @@
       <div class="art-item__img">
         <img src="img/article.jpg" alt="Article">
       </div>
-      <div class="art-item__info">
-        <span class="tag tag--lg tag--active">Stay Alive</span>
-        <span class="date">30.04.2018</span>
-        <span class="view">1000</span>
+      <div class="art-item__info row">
+          <span class="tag tag--lg tag--active">Stay Alive</span>
+          <span class="date">30.04.2018</span>
+          <span class="view">1000</span>
       </div>
       <div class="art-item__body">
-        <p class="blog-item__article-text">
-          <!-- Quite soon our team will send out letters to everyone who registered for the closed testing Stay Alive with link to downloading the project for testing.<br> -->
-
-
-        </p>
         <p>
           <strong>Quite soon our team will send out letters to everyone who registered for the closed testing Stay Alive with link
             to downloading the project for testing.</strong>
@@ -94,9 +94,82 @@
      
       </div>
     </div>
-
+  </div>
+  <div class="related-posts">
+    <div class="container">
+      <h2 class="related-posts__title">Read also</h2>
+      <div class="related-posts__wrap">
+        <div class="related-posts__item">
+            <article class="article article--related">
+                <div class="article__img">
+                    <a class="article__link" href="article.html" style="background-image: url('img/article.jpg')">
+                    </a>
+                </div>
+                <div class="article__content">
+                    <div class="article__content-item">
+                        <strong class="tag tag--active">Stay Alive</strong>
+                    </div>
+                    <div class="article__content-item">
+                        <h2 class="article__title">Beginning of the closed testing of the game with subscribers. Start of the Early Access Google.</h2>
+                    </div>
+                    <div class="article__content-item">
+                        <p class="article__text">Quite soon our team will send out letters to everyone who registered for the closed testing Stay Alive with link to downloading the project for testing.</p>
+                        <p class="article__text">Совсем скоро наша команда будет рассылать письма всем, кто регистрировался на закрытое тестирование Stay Alive, со ссылкой на скачивание проекта для тестирования.</p>
+                    </div>
+                    <div class="article__content-item row">
+                        <a class="btn btn--transition btn--light" href="#">Read Article</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="related-posts__item">
+            <article class="article article--related">
+                <div class="article__img">
+                    <a class="article__link" href="article.html" style="background-image: url('img/article.jpg')">
+                    </a>
+                </div>
+                <div class="article__content">
+                    <div class="article__content-item">
+                        <strong class="tag tag--active">Stay Alive</strong>
+                    </div>
+                    <div class="article__content-item">
+                        <h2 class="article__title">Beginning of the closed testing of the game with subscribers. Start of the Early Access Google.</h2>
+                    </div>
+                    <div class="article__content-item">
+                        <p class="article__text">Quite soon our team will send out letters to everyone who registered for the closed testing Stay Alive with link to downloading the project for testing.</p>
+                        <p class="article__text">Совсем скоро наша команда будет рассылать письма всем, кто регистрировался на закрытое тестирование Stay Alive, со ссылкой на скачивание проекта для тестирования.</p>
+                    </div>
+                    <div class="article__content-item row">
+                        <a class="btn btn--transition btn--light" href="#">Read Article</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="related-posts__item">
+            <article class="article article--related">
+                <div class="article__img">
+                    <a class="article__link" href="article.html" style="background-image: url('img/article.jpg')">
+                    </a>
+                </div>
+                <div class="article__content">
+                    <div class="article__content-item">
+                        <strong class="tag tag--active">Stay Alive</strong>
+                    </div>
+                    <div class="article__content-item">
+                        <h2 class="article__title">Beginning of the closed testing of the game with subscribers. Start of the Early Access Google.</h2>
+                    </div>
+                    <div class="article__content-item">
+                        <p class="article__text">Quite soon our team will send out letters to everyone who registered for the closed testing Stay Alive with link to downloading the project for testing.</p>
+                        <p class="article__text">Совсем скоро наша команда будет рассылать письма всем, кто регистрировался на закрытое тестирование Stay Alive, со ссылкой на скачивание проекта для тестирования.</p>
+                    </div>
+                    <div class="article__content-item row">
+                        <a class="btn btn--transition btn--light" href="#">Read Article</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-
-
 {% endblock %}

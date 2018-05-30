@@ -8,13 +8,16 @@
     
 .article
     box-shadow: $box-shadow
+    background-color: $white
     margin-bottom: 2rem
     border: 1px solid $border-color
     min-height: 320px
+    transition: box-shadow .3s ease-in-out
     +q(900)
         display: flex
     &__img
         padding: 1rem
+        overflow: hidden
         +q(900)
             flex: 1.5
             padding: 0
@@ -33,7 +36,7 @@
         color: $gray-3
         display: -webkit-box
         -webkit-line-clamp: 3
-        -webkit-box-orient: vertical; 
+        -webkit-box-orient: vertical
         overflow: hidden
     &__link
         display: block
@@ -41,14 +44,30 @@
         padding-bottom: 61%
         background-repeat: no-repeat
         background-size: cover
+        background-color: $gray-5
+        transition: transform .3s
+        will-change: transform
         +q(900)
             padding-bottom: 100%
             background-position: right top
             height: 100%
             padding-bottom: 0
+    &__link:hover
+        +q(900)
+            transform: scale(1.1)
     &__info
-        margin-left: auto
-        align-self: center
+        order: -1
+        width: 100%
+        margin-bottom: 1rem
+        display: flex
+        justify-content: space-around
+        +q(600)
+            margin-left: auto
+            align-self: center
+            width: auto
+            order: 1
+            align-self: center
+            margin-bottom: 0
     &__content-item
         margin-bottom: 1rem
     &__content-item:last-child
@@ -56,6 +75,12 @@
     .btn
         padding-left: 3rem
         padding-right: 3rem
+        width: 100%
+        +q(600)
+            width: auto
+
+.article:hover
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .3)
     
 
 .tags

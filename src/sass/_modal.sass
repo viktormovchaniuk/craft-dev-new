@@ -22,10 +22,12 @@
     
 .modal-dialog
     max-width: 465px
-    min-height: calc(100% - (1.75rem * 2))
+    min-height: calc(100% - (2rem * 2))
     display: flex
     align-items: center
-    margin: auto
+    margin: 2rem auto
+    z-index: 1070
+    position: relative
 
 .modal-dialog .btn--close
     position: absolute
@@ -48,7 +50,6 @@
     box-shadow: $box-shadow
     padding: 1rem
     position: relative
-    margin: 1rem
     +q(900)
         padding: 3.25rem
 

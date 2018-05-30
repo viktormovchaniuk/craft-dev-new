@@ -24,29 +24,44 @@ jQueryBridget( 'isotope', Isotope, $ );
     $(window).width() > 900 && $('.main-nav').removeAttr('style') && menuBtn.removeClass('is-active');
   });
 
+  var breadcrumb = $( '.breadcrumb .breadcrumb__item:last-child a');
 
+  if ( breadcrumb.length !== 0 ) {
+    breadcrumb.html(breadcrumb.html().substring(0, 20) + '...');
+  }
 
   
-  // var modal = $('.modal');
+
+  var modal = $('.modal');
   
+  
+  $('#modal-btn').on('click', function() {
+    $('body').addClass('modal-open');
+    modal.fadeIn().append('<div class="modal-overlay"></div>');
+    $('.modal-overlay').on('click', function() {
+      modal.fadeOut();
+      $('body').removeClass('modal-open');
+      $( this ).remove('.modal-overlay');
+    });
+  });
 
-  // $('#modal-btn').on('click', function() {
-  //   modal.fadeIn();
-  //   $('body').addClass('modal-open').prepend('<div class="modal-overlay"></div>');
-  // });
+  $('#btn-close').on('click', function() {
+    modal.fadeOut();
+    $('body').removeClass('modal-open');
+    $('.modal-overlay').remove();
+  });
 
-  // $('#btn-close').on('click', function() {
-  //   console.log(this);
+  // modalOverlay.on('click', function() {
   //   modal.fadeOut();
   //   $('body').removeClass('modal-open');
-  //   $('.modal-overlay').fadeOut( function() {
-  //     $(this).remove();
-  //   });
+  //   modalOverlay.fadeOut();
   // });
 
 }());
 
-var selectedCategory;
+var isActive = $('#filters').find('.is-active');
+var initiaFilter = isActive.find('button').attr('data-filter');
+
 
 var $grid = $('.grid').isotope({
   itemSelector: '.grid-item',
@@ -59,48 +74,23 @@ var $grid = $('.grid').isotope({
     selectedCategory: function( itemElem ) {
       return $( itemElem ).hasClass( 'new' ) ? 0 : 1;
     }
-  }
+  },
+  filter: initiaFilter
 });
+
+isActive.find('button').addClass('is-checked').trigger('click');
+
 
 // var $items = $('.grid').find('.grid-item');
 
 $('#filters').on( 'click', 'button', function() {
   var filterValue = $( this ).attr('data-filter');
-  console.log(filterValue);
-  // use filterFn if matches value
-  // filterValue = filterFns[ filterValue ] || filterValue;
   $grid.isotope({ filter: filterValue });
   $grid.isotope('updateSortData');
   $grid.isotope({ sortBy: 'selectedCategory' });
 });
 
-// $('#filters').on( 'click', 'button', function() {
 
-//   selectedCategory = $( this ).attr('data-sort-by');
-//   if ( selectedCategory === 'all' ) {
-//     $grid.isotope({
-//       sortBy: 'original-order'
-//     });
-//     // restore all items to full opacity
-//     $items.css({
-//       opacity: 1
-//     });
-//     return;
-//   }
-//   // change opacity for selected/unselected items
-//   var selectedClass = '.' + selectedCategory;
-//   $items.filter( selectedClass ).find('.card__header-text').css({
-//     backgroundColor: '#faac03'
-//   });
-//   $items.not( selectedClass ).find('.card__header-text').css({
-//     backgroundColor: '#aaaaaa'
-//   });
-
-//   // update sort data now that selectedCategory has changed
-//   
-// });
-
-// // change is-checked class on buttons
 $('#filters').each( function( i, buttonGroup ) {
   var $buttonGroup = $( buttonGroup );
   $buttonGroup.on( 'click', 'button', function() {
