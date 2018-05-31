@@ -1,6 +1,8 @@
 var Isotope = require('isotope-layout');
 var jQueryBridget = require('jquery-bridget');
 jQueryBridget( 'isotope', Isotope, $ );
+import 'slick-carousel';
+
 
 (function() {
   var dropdowns = $('.dropdown');
@@ -57,7 +59,6 @@ jQueryBridget( 'isotope', Isotope, $ );
 var isActive = $('#filters').find('.is-active');
 var initiaFilter = isActive.find('button').attr('data-filter');
 
-
 var $grid = $('.grid').isotope({
   itemSelector: '.grid-item',
   percentPosition: true,
@@ -66,82 +67,91 @@ var $grid = $('.grid').isotope({
     gutter: '.gutter-sizer'
   },
   getSortData: {
-    selectedCategory: function( itemElem ) {
-      return $( itemElem ).hasClass( 'new' ) ? 0 : 1;
+    selectedCategory: function selectedCategory(itemElem) {
+      return $(itemElem).hasClass('new') ? 0 : 1;
     }
   },
-  filter: initiaFilter
+  filter: initiaFilter,
+  sortBy: 'selectedCategory'
 });
 
 isActive.find('button').addClass('is-checked').trigger('click');
 
-$('#filters').on( 'click', 'button', function() {
-  var filterValue = $( this ).attr('data-filter');
+
+$('#filters').on('click', 'button', function() {
+  var filterValue = $(this).attr('data-filter');
   $grid.isotope({ filter: filterValue });
-  $grid.isotope('updateSortData');
-  $grid.isotope({ sortBy: 'selectedCategory' });
 });
 
-
-$('#filters').each( function( i, buttonGroup ) {
-  var $buttonGroup = $( buttonGroup );
-  $buttonGroup.on( 'click', 'button', function() {
+$('#filters').each(function(i, buttonGroup) {
+  var $buttonGroup = $(buttonGroup);
+  $buttonGroup.on('click', 'button', function() {
     $buttonGroup.find('.is-checked').removeClass('is-checked');
-    $( this ).addClass('is-checked');
+    $(this).addClass('is-checked');
+  });
+});
+
+$('#filters').slick({
+  nextArrow: '.next',
+  prevArrow: '.prev',
+  infinite: false,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+  mobileFirst: true,
+  responsive: [
+    {
+      breakpoint: 900,
+      settings: 'unslick'
+    }
+  ]
+});
+
+var nextBtn = $('.next');
+var prevBtn = $('.prev');
+
+nextBtn.on('click', function() {
+  prevBtn.removeClass('disabled');
+  var self = $( this );
+  $('#filters').each(function(i, buttonGroup) {
+    var $buttonGroup = $(buttonGroup);
+    // console.log($buttonGroup.find('.is-checked').parent().parent().parent().next().find('button'));
+    $buttonGroup.find('.is-checked').removeClass('is-checked').parent().parent().parent().next().find('button').addClass('is-checked').trigger('click');
+  });
+});
+
+prevBtn.on('click', function() {
+  nextBtn.removeClass('disabled');
+  var self = $( this );
+  $('#filters').each(function(i, buttonGroup) {
+    var $buttonGroup = $(buttonGroup);
+    $buttonGroup.find('.is-checked').removeClass('is-checked').parent().parent().parent().prev().find('button').addClass('is-checked').trigger('click');
   });
 });
 
 
-// $(window).resize(function() {
-//   if ($(window).width() < 900) {
-//     isActive.prev().css('display', 'flex');
-//     isActive.css('display', 'flex');
-//     isActive.next().css('display', 'flex');
-//   }
-// });
 
-var a = $('#filters').children();
+// if(window.matchMedia('(max-width: 900px)').matches) {
+//   var itemCount = $('.progress-bar__item').length - 1;
+  
 
-function nextItem() {
-  isActive.find('button').next().addClass('is-checked').trigger('click');
-}
+//   var a = $(window).resize(function() {
+//     var itemWidth = $('.progress-bar__item')[2].offsetWidth;
+//     var minWidth = itemWidth * itemCount * 2;
+//     return minWidth;
+// //   });
 
-function prevItem() {
-  isActive.find('button').prev().addClass('is-checked').trigger('click');
-}   
+// //   console.log(a);
 
+// //   $('.progress-bar__row').css('minWidth', a);
 
-$('.prev').on('click', prevItem());
-$('.next').on('click', nextItem());
-
-
-
-// var $newItems = $(`
-// <div class="grid-item access">
-//   <div class="card">
-//       <div class="card__header">
-//         <span class="card__header-text">access111</span>
-//       </div>
-//       <div class="card__body">
-//         <h4 class="card__body-title">Improve the logic of collecting resources with an inventory tool available</h4>
-//         <p class="card__body-text"> </p>
-//       </div>
-//   </div>
-// </div>`);
-// setTimeout(function() {
-//   $('.grid').append( $newItems).isotope( 'reloadItems' ).isotope({ sortBy: 'selectedCategory' });
-//   $items = $('.grid').find('.grid-item');
-
-//   var selectedClass = '.' + selectedCategory;
-//   $items.filter( selectedClass ).find('.card__header-text').css({
-//     backgroundColor: '#faac03'
-//   });
-//   $items.not( selectedClass ).find('.card__header-text').css({
-//     backgroundColor: '#aaaaaa'
-//   });
-// }, 5000);
-
-
-
+  
+  
+  
+//   // console.log(minWidth);
+//   // isActive.css('display', 'flex');
+//   // isActive.prev().css('display', 'flex');
+//   // isActive.next().css('display', 'flex');
+// }
 
 

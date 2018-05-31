@@ -140,3 +140,41 @@
         right: 0
         margin: auto
         transform: rotate(-45deg)
+
+
+.btn.prev,
+.btn.next
+    position: relative
+    padding: 1.5rem
+    .icon
+        position: absolute
+        content: ''
+        width: 20px
+        height: 20px
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+        margin: auto
+        border-left: 2px solid $bg-dark
+        border-bottom: 2px solid $bg-dark
+
+.btn.prev
+    .icon
+        transform: rotate(45deg)
+        left: 10px
+
+.btn.next
+    .icon
+        transform: rotate(225deg)
+        right: 10px
+
+.btn.prev.disabled,
+.btn.next.disabled
+    pointer-events: none
+    &:before
+        border-color: $gray-3
+    &:after
+        border-color: $gray-3
+    .icon
+        border-color: $gray-3
