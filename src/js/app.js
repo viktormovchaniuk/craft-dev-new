@@ -103,18 +103,16 @@ $('#filters').each( function( i, buttonGroup ) {
 var a = $('#filters').children();
 
 function nextItem() {
-  
+  isActive.find('button').next().addClass('is-checked').trigger('click');
 }
 
-$('.next').on('click', function() {
-  for(var i = 0; i < a.length; i++) {
-    if( $(a[i]).hasClass('is-active') ) {
-      $(a[i]).removeClass('is-active');
-      $(a[i - 1]).addClass('is-active').find('button').trigger('click');;
-      return;
-    }
-  }
-});
+function prevItem() {
+  isActive.find('button').prev().addClass('is-checked').trigger('click');
+}   
+
+
+$('.prev').on('click', prevItem());
+$('.next').on('click', nextItem());
 
 
 
