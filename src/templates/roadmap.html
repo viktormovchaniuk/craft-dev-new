@@ -201,9 +201,11 @@ title: Roadmap page
             %} 
             
             <div id="roadmap" class="roadmap">
-                
+                    <div class="progress-bar__btns">
+                            <button class="btn btn--transition prev"><i class="icon"></i></button>
+                            <button class="btn btn--transition next"><i class="icon"></i></button>
+                        </div>
                 <div class="progress-bar">
-                    <button class="btn btn--transition prev"><i class="icon"></i></button>
                     <div id="filters" class="progress-bar__row">
                         <div class="progress-bar__item">
                             <button type="button" data-filter=".idea" class="progress-bar__btn"></button>
@@ -218,7 +220,7 @@ title: Roadmap page
                         <div class="progress-bar__item">
                             <button type="button" data-filter=".access" class="progress-bar__btn"></button>
                             <span class="progress-bar__event">To Leave Early Access</span>
-                            <span class="progress-bar__date">September<br> 2017</span>
+                            <span class="progress-bar__date">May<br> 2017</span>
                         </div>
                         <div class="progress-bar__item">
                             <button type="button" data-filter=".beta" class="progress-bar__btn"></button>
@@ -231,7 +233,6 @@ title: Roadmap page
                             <span class="progress-bar__date">September<br> 2017</span>
                         </div>
                     </div>
-                    <button class="btn btn--transition next"><i class="icon"></i></button>
                 </div>
             </div>
             <div class="grid">
@@ -245,7 +246,7 @@ title: Roadmap page
                     <div class="grid-item {{ grid.event }} {{ grid.status }}">
                         <div class="card">
                             <div class="card__header">
-                                <span class="card__header-text">{{ grid.event }} {{ grid.status }}</span>
+                                <span class="card__header-text"> {{ grid.status }}</span>
                             </div>
                             <div class="card__body">
                                 <h4 class="card__body-title">{{ grid.title }}</h4>

@@ -1,3 +1,7 @@
+.main-content
+    position: relative
+    z-index: 10
+
 .app
     max-width: 430px
     margin: 2rem auto
@@ -27,6 +31,40 @@
         flex-wrap: wrap
         justify-content: center
         justify-content: space-around
+
+.bg
+    position: absolute
+    background-repeat: no-repeat
+    background-size: cover
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+    margin-left: -100px
+    margin-right: -100px
+    z-index: 1
+    will-change: transform
+
+.bg--1
+    background-image: url(../img/1.png)
+
+.bg--2
+    background-image: url(../img/2.png)
+
+.bg--3
+    background-image: url(../img/3.png)
+    +q(1600)
+        background-position: 0 -220px
+
+.bg--4
+    background-image: url(../img/4.png)
+
+.bg--5
+    background-image: url(../img/5.png)
+
+.bg--6
+    background-image: url(../img/6.png)
 
         
     

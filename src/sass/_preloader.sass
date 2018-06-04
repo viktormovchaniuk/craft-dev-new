@@ -1,0 +1,46 @@
+.preloader
+    background-color: lighten($gray-1, 0)
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 99999
+    transition: all .5s
+    overflow: visible
+    opacity: 1
+    &__item
+        width: 80px
+        height: 80px
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        margin: auto
+        border-radius: 50%
+        border: 10px solid $yellow
+        border-top-color: $white
+        border-left-color: $white
+        transform: rotate(-45deg)
+        animation: 1s spin infinite ease-in-out
+    &__item:after
+        position: absolute
+        content: ''
+        width: 10px
+        left: 0
+        right: 0
+        top: -10px
+        bottom: -10px
+        margin: auto
+        border-radius: 3px
+        background-color: $yellow
+        transform: rotate(45deg)
+    &--hidden
+        opacity: 0
+        visibility: hidden
+@keyframes spin
+    from
+        transform: rotate(-45deg)
+    to
+        transform: rotate(315deg)

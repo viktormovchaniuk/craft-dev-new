@@ -5,19 +5,24 @@
     will-change: left, top, transfrom, opacity
 
 .progress-bar
-    padding: 50px 0
     margin-bottom: 1.75rem
+    overflow: hidden
     +q(900)
+        overflow: visible
+        margin-bottom: 3.75rem
+    &__btns
         display: flex
-        align-items: center
-    // +q(900)
-    //     margin-bottom: 3.75rem
+        justify-content: space-between
     &__row
-        +q(900)
-            display: flex
-            flex: 1
-            justify-content: space-between
+        padding: 50px 0
+        display: flex
+        justify-content: space-between
+        align-items: center
         position: relative
+        transition: transform 1s cubic-bezier(0.42, 0, 0, 1.82)
+        will-change: transform
+        +qmax(899)
+            padding: 50px 10px
     &__row:before
         position: absolute
         content: ''
@@ -27,69 +32,64 @@
         top: 0
         bottom: 0
         left: 10px
-        right: 10px
+        right: 20px
         margin: auto
         z-index: -2
     &__item
-        padding: 100px 0
-        +q(900)
-            flex: 1
-        // justify-content: flex-end
+        display: flex
+        flex: 1
         position: relative
-        // display: flex
+        +qmax(899)
+            pointer-events: none
     &__item:last-child
-        +q(900)
-            flex: 0
+        flex: 0
+    &__item.is-active:after
+        position: absolute
+        content: ''
+        background-color: $gray-5
+        top: 0
+        bottom: 0
+        left: 0
+        height: 0
+        margin: auto
+        width: 100%
+        border-top: 5px solid $gray-5
+        border-bottom: 5px solid $gray-5
+        z-index: -2
+    &__item.is-active ~ .progress-bar__item:after
+        position: absolute
+        content: ''
+        background-color: $gray-5
+        top: 0
+        bottom: 0
+        left: 0
+        height: 0
+        margin: auto
+        width: 100%
+        border-top: 5px solid $gray-5
+        border-bottom: 5px solid $gray-5
+        z-index: -2
     &__item.is-active ~ .progress-bar__item .progress-bar__btn
         background-color: $gray-6
         border-color: $gray-6
     &__item.is-active ~ .progress-bar__item .progress-bar__btn:after
         border-color: $gray-6
-    &__item.is-active:before
-        position: absolute
-        top: 0
-        bottom: 0
-        right: -2px
-        z-index: 10
-        content: ''
-        width: 100%
-        margin: auto
-        height: 0
-        background-color: $gray-5
-        border: 5px solid $gray-5
-        z-index: -1
-    &__item.is-active ~ .progress-bar__item:before
-        position: absolute
-        top: 0
-        bottom: 0
-        right: -2px
-        z-index: 10
-        content: ''
-        width: 100%
-        margin: auto
-        height: 0
-        background-color: $gray-5
-        border: 5px solid $gray-5
-        z-index: -1
-        +q(1200)
-            border: 4px solid $gray-5
-    &__item:last-child
-        .progress-bar__date, .progress-bar__event
-            +q(900)
-                transform: translateX(calc(-100% + 24px))
-    &__item:first-child
-        .progress-bar__date, .progress-bar__event
-            +q(900)
-                transform: none
+    &__item:last-child:after
+        display: none
+    &__item:last-child 
+        .progress-bar__event, .progress-bar__date
+            right: 0
+            left: auto
+            +qmax(899)
+                transform: translateX(calc(50% - 12px))
     &__btn
         width: 24px
         height: 24px
         border-radius: 50%
         background-color: $bg-dark
         position: relative
+        left: 0px
         border: 2px solid $bg-dark
-        +qmax(900)
-            // visibility: hidden
     &__btn:after
         position: absolute
         content: ''
@@ -107,39 +107,35 @@
     &__event
         position: absolute
         left: 0
-        bottom: 70%
+        bottom: 150%
         $color: $base-font-color
         font-size: .875rem
         font-weight: bold
         max-width: 90px
-        +q(900)
-            transform: translateX(-25%)
-        +qmax(900)
-            transform: translateX(-25%)
-            visibility: hidden
+        transition: opacity .8s
+        +qmax(899)
+            opacity: 0
+            transform: translateX(calc(-50% + 12px))
     &__date
         position: absolute
         left: 0
-        // transform: translateX(calc(100% - 24px))
-        top: 70%
+        top: 150%
         font-weight: bold
         font-size: 0.875rem
         color: $disable-color
-        +q(900)
-            transform: translateX(-25%)
-        +qmax(900)
-            transform: translateX(-25%)
-            visibility: hidden
-    &__btn.is-checked 
-        visibility: visible
-    &__btn.is-checked ~ .progress-bar__date
-        visibility: visible
+        transition: opacity .8s
+        +qmax(899)
+            opacity: 0
+            transform: translateX(calc(-50% + 12px))
     &__btn.is-checked ~ .progress-bar__event
-        visibility: visible
+        opacity: 1
+    &__btn.is-checked ~ .progress-bar__date    
+        opacity: 1
 
-.progress-bar .btn.prev,
-.progress-bar .btn.next
-    display: none
+.roadmap .btn.prev,
+.roadmap .btn.next
+    +q(900)
+        display: none
     
      
 .grid-item

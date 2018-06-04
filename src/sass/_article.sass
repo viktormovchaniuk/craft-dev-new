@@ -7,19 +7,21 @@
     &__info
         margin-bottom: 1.5rem
         align-items: center
+        display: flex
+        flex-wrap: wrap
+        .date, .view
+            flex-basis: 50%
+            +q(400)
+                flex-basis: auto
+                margin-right: 15px
         .tag
+            flex-basis: 100%
             margin-right: 2rem
             margin-bottom: 1rem
+            +q(400)
+                flex-basis: auto
             +q(600)
                 margin-bottom: 0
-        .date
-            width: 50%
-        .view
-            width: 50%
-    &__data
-        width: 100%
-        +q(600)
-            width: auto
     &__body
         margin-bottom: 1.5rem
 
@@ -29,6 +31,34 @@
     p
         margin: 1rem 0
         color: #333
+    ul li
+        list-style-type: none
+        position: relative
+    ul li:before
+        position: absolute
+        content: ''
+        width: 10px
+        height: 10px
+        left: -17px
+        top: 6px
+        margin: auto
+        border-radius: 50%
+        background-color: $yellow
+    blockquote
+        position: relative
+        background-color: $gray-5
+        margin: 0 20px
+        padding: 16px 13px
+    blockquote:after
+        position: absolute
+        content: ''
+        left: 1px
+        top: 0
+        bottom: 0
+        width: 4px
+        background-color: $yellow
+
+
 
 
 .related-posts
@@ -64,3 +94,28 @@
         overflow: hidden
     .article__text
         -webkit-line-clamp: 2
+
+.slider
+    margin-bottom: 2rem
+    &__item
+        margin-bottom: .5rem
+        +q(900)
+            margin-bottom: 1rem
+
+.slider-nav
+    .slick-slide
+        font-size: 0
+        .slider-nav__item
+            cursor: pointer
+            padding: 2%
+    .slick-slide.slick-current
+        position: relative
+    .slick-slide.slick-current:after
+        position: absolute
+        content: ''
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: transparent
+        border: 2px solid $yellow
