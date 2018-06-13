@@ -3,3 +3,11 @@ ProjectTitle: roadmap
 PageList:
 - file: page.html
   ready: 50
+- file: blog.html
+  ready: 50
+- file: roadmap.html
+  ready: 50
+- file: article.html
+  ready: 50
+- file: policy.html
+  ready: 50
