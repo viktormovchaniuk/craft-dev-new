@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+  <body>
+    <div id="preloader" class="preloader">
+      <div class="preloader__item"></div>
+    </div>
+    <div class="page front-page">
+      <div class="bg bg--1"></div>
+      <div class="bg bg--2"></div>
+      <div class="bg bg--3"></div>
+      <div class="bg bg--4"></div>
+      <div class="bg bg--5"></div>
+      <div class="bg bg--6"></div>
+      <header class="main-header">
+        <div class="container">
+          <div class="row jc-space-between ai-center">
+            <div class="main-header__logo">
+              <img width="145" height="50" class="logo__img" src="img/logo.png" alt="CraftDevelopment"> </div>
+            <nav class="main-nav">
+              <ul class="nav-links">
+                <li class="nav-item">
+                  <a href="page.html">Main</a>
+                </li>
+                <li class="nav-item">
+                  <a href="blog.html">DevBlog</a>
+                </li>
+                <li class="nav-item">
+                  <a href="roadmap.html">Roadmap</a>
+                </li>
+              </ul>
+              <ul class="social-links">
+                <li class="nav-item">
+                  <a class="btn btn--transition-simple" href="#">Facebook</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn--transition-simple" href="#">Twitter</a>
+                </li>-
+                <li class="nav-item">
+                  <a class="btn btn--transition-simple" href="#">Instagram</a>
+                </li>
+              </ul>
+              <div class="dropdown main-nav__dropdown">
+                <button class="btn btn--dark dropdown__toggle" type="button"> Eng </button>
+                <div class="dropdown__menu">
+                  <a class="dropdown__item dropdown__item--disabled" href="#">Eng</a>
+                  <a class="dropdown__item" href="#">Rus</a>
+                </div>
+              </div>
+            </nav>
+            <button type="button" class="toggler">
+              <span class="toggler__item"></span>
+              <span class="toggler__item"></span>
+              <span class="toggler__item"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <!-- BEGIN content -->
+      <main class="main-content">
+        <div class="container">
+          <div class="app">
+            <div class="app__header">
+              <a class="btn btn--secondary btn--block btn--lg btn--dark" href="https://docs.google.com/forms/d/e/1FAIpQLSf-Q8vDA_2AOmVZvmqsM3wFZWb7X6462oLOX2LPMXfRhShHSw/viewform">Register for closed alpha-testing</a>
+              <a class="btn btn--primary btn--block btn--lg btn--dark" href="blog.html">Developers Blog</a>
+            </div>
+            <div class="app__body">
+              <span class="app__text">Soon on...</span>
+            </div>
+            <div class="app__footer">
+              <a href="#">
+                <img src="img/apple.png" alt="AppleStore"> </a>
+              <a href="#">
+                <img src="img/google.png" alt="GoogleStore"> </a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- END content -->
+      <footer class="main-footer">
+        <div class="container">
+          <div class="main-footer__wrap">
+            <div class="main-footer-item">
+              <button id="modal-btn" class="btn btn--transition btn--dark" type="button">Leave Message</button>
+            </div>
+            <div class="main-footer-item">
+              <div class="contacts">
+                <div class="contacts__item">
+                  <div class="contact">
+                    <b class="contact__title">Skype:</b>
+                    <span class="contact__text">craftdevelop</span>
+                  </div>
+                </div>
+                <div class="contacts__item">
+                  <div class="contact">
+                    <b class="contact__title">Viber/WhatsApp:</b>
+                    <span class="contact__text">+38 (067) 970-93-43</span>
+                  </div>
+                </div>
+                <div class="contacts__item">
+                  <div class="contact">
+                    <b class="contact__title">E-mail:</b>
+                    <span class="contact__text">info.craftdevelop@gmail.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-footer-item main-footer-item--first">
+              <div class="copy">
+                <span class="text-yellow">Craft Development</span> All rights reserved.
+                <a href="policy.html" class="copy__link">Privacy policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button id="btn-close" type="button" class="btn btn--close"></button>
+            <form>
+              <div class="modal-header">
+                <b class="modal-header__title">Leave message</b>
+                <span class="modal-header__text">and we will definitely answer you</span>
+              </div>
+              <div class="modal-body">
+                <div class="modal-form">
+                  <div class="modal-form__item">
+                    <div class="input-wrap">
+                      <input class="form-input" autocomplete='name' placeholder="Name" type="text" /> </div>
+                  </div>
+                  <div class="modal-form__item">
+                    <div class="input-wrap">
+                      <input class="form-input not-valid" autocomplete='email' placeholder="E-mail" type="email" required/>
+                      <div class="invalid-feedback">Error: Your email address is invalid</div>
+                    </div>
+                  </div>
+                  <div class="modal-form__item">
+                    <div class="input-wrap">
+                      <textarea class="form-input" placeholder="Your message" name="" id=""></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn--block btn--transition btn--light">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>
